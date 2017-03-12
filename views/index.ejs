@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Facebook OAuth with Passport</title>
+  </head>
+  <body>
+    <% if (locals.isLoggedIn) { %>
+      <a href="/logout">logout</a>
+    <% } else { %>
+      <a href="/login">login</a>
+    <% } %>
+    <% if (locals.isLoggedIn) { %>
+      <pre>
+        <code><%= locals.json %></code>
+      </pre>
+    <% } %>
+  </body>
+</html>
